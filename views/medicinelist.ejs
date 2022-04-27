@@ -1,0 +1,12 @@
+<%- include('partials/header') %>
+        <h1><%= success %></h1>
+        <h1>Medicines:</h1>
+        <% for(let i = 0;i<medicinelist.length;i++){%>
+            <h2>Medicine <%= i+1%></h2>
+            <h4> Medicine name: </h4>
+            <h5><%=medicinelist[i].medicineName %></h5>
+            <% for(let j = 0;j<medicinelist[i].remindertimeStamps.length;j++){ %>
+                <h5><%=medicinelist[i].remindertimeStamps[j] %></h5>
+            <%}%>
+        <% }%>
+<%- include('partials/footer') %>

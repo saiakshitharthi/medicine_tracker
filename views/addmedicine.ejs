@@ -1,0 +1,10 @@
+<%- include('partials/header') %>
+        <form action="/addmedicine" method="post">
+            <label for="medicinename">Medicine Name:</label>
+            <input type="text" name="medicinename" id="medicinename">
+            
+            <label for="numofts">Number of Timestamps:</label>
+            <input type="number" name="numofts" id="numofts">
+            <input type="submit" value="submit">
+        </form>
+        <%- include('partials/footer') %>
