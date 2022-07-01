@@ -1,0 +1,37 @@
+<%- include('partials/header') %>
+        <!-- <form action="/addmedicine" method="post">
+            <label for="medicinename">Medicine Name:</label>
+            <input type="text" name="medicinename" id="medicinename">
+            
+            <label for="numofts">Number of Timestamps:</label>
+            <input type="number" name="numofts" id="numofts">
+            <input type="submit" value="submit">
+        </form> -->
+        <div class="container ">
+            <div class="row justify-content-center mt-5">
+    
+                
+                <div class="card shadow col-5 cardstyle bg-light">
+                    <div class="card-body">
+                        <h1 class="display-5 text-center mb-5">New Medicine</h1>
+                        <form action="" class="form-group" method="post">
+                            <div class="form-group required mb-4"><label class="control-label" for="medicinename">Medicine Name:</label>
+                                <input class="form-control" id="medicinename" name="medicinename" required type="text">
+                            </div>  
+                            <div class="form-group required mb-4"><label class="control-label" for="dosage">Dosage:</label>
+                                <input class="form-control" id="dosage" name="dosage" required type="text">
+                            </div>
+                            <div class="form-group required mb-4"><label class="control-label" for="frequency">Frequency (weekly or monthly):</label>
+                                <input class="form-control" id="frequency" name="frequency" required type="text">
+                            </div>
+                            <div class="form-group  required mb-4"><label class="control-label" for="numofts">Frequency of intake: (in a day)</label>
+                                <input class="form-control" id="numofts" name="numofts" required type="number">
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Next!">
+                        </form>
+                    </div>
+                    
+                </div>
+              </div>
+        </div>
+        <%- include('partials/footer') %>

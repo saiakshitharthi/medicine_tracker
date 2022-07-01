@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+    
+    <div class="container ">
+        <div class="row justify-content-center mt-5">
+
+            
+            <div class="card shadow col-5 cardstyle bg-light">
+                <div class="card-body">
+                    <h1 class="display-5 text-center mb-5">Login</h1>
+                    <form action="/login" class="form-group" method="post">
+                        <div class="form-group required mb-4"><label class="control-label" for="username">Username</label>
+                            <input class="form-control" id="username" name="username" required type="text">
+                        </div>  
+                        <div class="form-group  required mb-4"><label class="control-label" for="password">Password</label>
+                            <input class="form-control" id="password" name="password" required type="password">
+                        </div>
+                        <input type="submit" class="btn btn-primary" value="Login">
+                    </form>
+                </div>
+                
+            </div>
+          </div>
+    </div>
+<%- include('partials/footer') %>

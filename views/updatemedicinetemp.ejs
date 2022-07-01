@@ -1,0 +1,58 @@
+<%- include('partials/header') %>
+                  <script src=
+              "https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js">
+                  </script>
+                  <script src=
+              "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js">
+                  </script>
+               
+                  <!-- Include Moment.js CDN -->
+                  <script type="text/javascript" src=
+              "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment.min.js">
+                  </script>
+               
+                  <!-- Include Bootstrap DateTimePicker CDN -->
+                  <link
+                      href=
+              "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/css/bootstrap-datetimepicker.min.css"
+                      rel="stylesheet">
+               
+                  <script src=
+              "https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.37/js/bootstrap-datetimepicker.min.js">
+                      </script>
+        <form action="/medicinelist/updatetemp/<%=id%>" class="form-group" method="post">
+        <div class="container justify-content-center ">
+            <div class="row justify-content-center mt-5">
+                <div class="card shadow col-12 cardstyle">
+            
+            <% for(let i = 0;i<numvals;i++){ %>
+            <div class="row justify-content-center mt-5">
+                <div class="card shadow col-5 cardstyle bg-light">
+                    <div class="card-body">
+                        <h1 class="display-5 text-center mb-5">Time <%=i+1 %></h1>
+                            <div class="form-group required mb-4"><label class="control-label" for="medicinename">Medicine Name:</label>
+                                <input class="form-control" type="text" id="datetime<%=i%>" name="<%=i%>" required/>
+                            </div>  
+                        </div>
+                        <script>
+     
+                            // Below code sets format to the
+                            // datetimepicker having id as
+                            // datetime
+                            $('#datetime<%=i%>').datetimepicker({
+                                format: 'HH:mm'
+                            });
+                        </script>
+                    </div>
+                </div>
+                <% } %>
+                <div class="row justify-content-center">
+
+                    <input type="submit" class="btn btn-primary mb-5 mt-5 col-1" value="Next!">
+                </div>
+            </div>
+        </div>
+            </div>
+        </form>
+    <%- include('partials/footer') %>
+

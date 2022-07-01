@@ -1,0 +1,30 @@
+<%- include('partials/header') %>
+    <div class="container mt-5 d-flex p-5 justify-content-center">
+        <div class="card col-7 justify-content-center rounded">
+            <h1 class="display-5 text-center mb-2 rounded" >Medicines:</h1>
+            <hr>
+            <div class="card-body d-flex flex-column align-items-center">
+       
+            <% if(medicinelist.length==0){%>
+                <h3>Your Medicines are empty!</h3>
+            <% } %>
+
+            
+            <% for(let i=0;i<medicinelist.length;i++){%>
+                    <div class="card justify-content-center bg-light shadow col-8 mb-5">
+    
+                    <div class="card-body">
+                    <h2 class="display-6 text-center mb-5"><%=medicinelist[i].medicineName %>
+                    </h2>
+                        <div class="row justify-content-center">
+
+                            <a class="col-6 text-center" href="/medicinelist/detail/<%=medicinelist[i]._id%>"><button class="btn btn-primary"> Full Details</button></a>
+                        </div>
+                    
+                    </div>
+                </div>
+            <% }%>
+        </div>
+        </div>
+    </div>
+    <%- include('partials/footer') %>

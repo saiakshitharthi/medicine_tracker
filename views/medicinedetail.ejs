@@ -1,0 +1,46 @@
+<%- include('partials/header') %>
+<div class="container mt-5">
+    <div class="row justify-content-center">
+
+        <div class="card col-6">
+            <div class="card-body">
+
+                <h1 class="display-5 text-center mb-5">Medicine Details</h1>
+                
+            </div>
+            <table class="table table-striped table-bordered border">
+                <tbody>
+                  <tr>
+                    
+                    <td class="text-begin">Medicine Name:</td>
+                    <td class="text-center" ><%= medicine.medicineName%></td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="text-begin">Dosage</td>
+                    <td class="text-center"><%= medicine.dosage%></td>
+                  </tr>
+                  <tr>
+                    
+                    <td class="text-begin">Frequency</td>
+                    <td class="text-center"><%= medicine.Frequency%></td>
+                  </tr>
+                  <%for(let i = 0;i<medicine.remindertimeStamps.length;i++){ %>
+                      <tr>
+                       
+                        <td class="text-begin">Time Stamp <%=i+1%></td>
+                        <td class="text-center"><%= medicine.remindertimeStamps[i] %></td>
+                      </tr>
+
+                    <%}%>
+                </tbody>
+              </table>
+            </div>
+            <div class="row">
+
+                <a class="col-6 text-end mt-4"href="/medicinelist/delete/<%= medicine._id%>"><button class="btn btn-danger">Delete</button></a>
+                <a class="col-6 text-begin mt-4" href="/medicinelist/update/<%= medicine._id%>"><button class="btn btn-warning">Update</button></a>
+            </div>
+    </div>
+</div>
+<%- include('partials/footer') %>
